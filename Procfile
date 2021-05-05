@@ -1,0 +1,1 @@
+web: gunicorn config.wdgi --log-file -
