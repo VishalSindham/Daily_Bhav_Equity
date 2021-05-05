@@ -1,0 +1,21 @@
+
+SC_CODE = row['SC_CODE'],SC_NAME= row['SC_NAME'],SC_GROUP= row['SC_GROUP'],SC_TYPE = row['SC_TYPE'],OPEN = row['OPEN'],HIGH = row['HIGH'],LOW = row['LOW'],CLOSE = row['CLOSE'],LAST = row['LAST'],PREVCLOSE = row['PREVCLOSE'],NO_TRADES= row['NO_TRADES'],NO_OF_SHRS= row['NO_OF_SHRS'],NET_TURNOV= row['NET_TURNOV'],TDCLOINDI= row['TDCLOINDI']
+
+
+
+Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:38:48) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import csv
+>>> import os
+>>> path =  "C:\\...." # Set path of new directory here
+>>> os.chdir(path) # changes the directory
+>>> from dashboard.models import Country # imports the model
+>>> with open('countries_continents.csv') as csvfile:
+...     reader = csv.DictReader(csvfile)
+...     for row in reader:
+...             p = Country(country=row['Country'], continent=row['Continent'])
+...             p.save()
+...
+>>>
+>>> exit()
