@@ -26,7 +26,8 @@ after configuration
 start django server first and  Vuejs server because vuejs is dependent on the django server to serve pages 
 it won't throw error if did start it first .
 
-on backend we wrote basic python script on_loop to fetch data bhavcopy daily at 6:00pm and clean database daily . on_loop it's scheduled .
+on backend we wrote basic python script on_loop to fetch data bhavcopy daily at 6:00pm and clean database daily  on_loop it's scheduled .
+run it once on other terminal and let it run .
 
 
 
